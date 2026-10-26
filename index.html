@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urban Wholesalers Properties LTD | Rental-management app for landlords</title>
+  <meta name="description" content="UK property company developing an Android app that helps landlords keep properties, rooms, tenants, rent and payments organised in one place.">
+  <meta name="theme-color" content="#FAF8F1">
+  <meta name="color-scheme" content="light">
+
+  <!-- Google Search Console (HTML tag method): paste the exact tag Google gives you on the line below. Never make one up. See README.md, step 4. -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Urban Wholesalers Properties LTD">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Urban Wholesalers Properties LTD">
+  <meta property="og:description" content="A practical rental-management app for landlords. Android app in development.">
+  <!-- Turn these on once the site is live on your own domain: replace https://www.example.co.uk in the 3 tags below, then delete the START and END lines. See README.md, step 3. -->
+  <!-- START social tags
+  <link rel="canonical" href="https://www.example.co.uk/">
+  <meta property="og:url" content="https://www.example.co.uk/">
+  <meta property="og:image" content="https://www.example.co.uk/assets/img/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Urban Wholesalers Properties LTD: your properties, your tenants, a clearer view.">
+  <meta name="twitter:card" content="summary_large_image">
+  END social tags -->
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/newsreader-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Urban Wholesalers Properties LTD",
+    "legalName": "URBAN WHOLESALERS PROPERTIES LTD",
+    "email": "Urbanpropertyltd@hotmail.com",
+    "telephone": "+44 7717 131104",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "27 Burnham Close",
+      "addressLocality": "Windsor",
+      "postalCode": "SL4 4PN",
+      "addressCountry": "GB"
+    },
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "Companies House company number",
+      "value": "15449995"
+    }
+  }
+  </script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-mark" viewBox="0 0 36 36">
+      <rect class="mark-bg" width="36" height="36" rx="9"/>
+      <g fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" transform="translate(6 5.6)">
+        <path class="mark-door" d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+        <path class="mark-fg" d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      </g>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-progress" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M10 18v-7"/><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></symbol>
+    <symbol id="i-phone-device" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/><path d="M9 21H3v-6"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top">
+        <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+        <span class="brand__text">
+          <span class="brand__name">Urban Wholesalers</span>
+          <span class="brand__sub">Properties LTD</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__label">Menu</span>
+        <svg class="nav-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path class="nav-toggle__open" d="M4 7h16M4 12h16M4 17h16"/>
+          <path class="nav-toggle__close" d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="site-nav__list" role="list">
+          <li><a class="site-nav__link" href="#about">About</a></li>
+          <li><a class="site-nav__link" href="#app">The app</a></li>
+          <li><a class="site-nav__link" href="#features">Features</a></li>
+          <li><a class="site-nav__link" href="#how-it-works">How it works</a></li>
+          <li><a class="site-nav__cta" href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <a class="status-pill" href="#status">
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            Android app in development
+          </a>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__line">Your properties.</span>
+            <span class="hero__line">Your tenants.</span>
+            <span class="hero__line">A clearer view.</span>
+          </h1>
+          <p class="hero__lead">A practical rental-management app from Urban Wholesalers Properties LTD, designed to help landlords organise properties, tenants and rent records in one place.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#app">Explore the app</a>
+            <a class="btn btn--secondary" href="#contact">Contact us</a>
+          </div>
+          <ul class="trust" role="list">
+            <li class="trust__item">
+              <svg class="trust__icon" aria-hidden="true" focusable="false"><use href="#i-landmark"/></svg>
+              <span>Registered in England and Wales</span>
+            </li>
+            <li class="trust__item">
+              <svg class="trust__icon" aria-hidden="true" focusable="false"><use href="#i-badge"/></svg>
+              <span>Company no. 15449995</span>
+            </li>
+            <li class="trust__item">
+              <svg class="trust__icon" aria-hidden="true" focusable="false"><use href="#i-phone-device"/></svg>
+              <span>Records stored on your phone</span>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="hero__visual">
+          <div class="showcase">
+            <picture class="showcase__phone showcase__phone--back">
+              <source type="image/webp" srcset="assets/img/phone-payment-hero-408.webp 408w, assets/img/phone-payment-hero-816.webp 816w, assets/img/phone-payment-hero-1224.webp 1224w" sizes="(min-width: 1264px) 260px, (min-width: 960px) 22vw, 50vw">
+              <img src="assets/img/phone-payment-hero.png" width="408" height="505" decoding="async"
+                   alt="Rent screen in the app showing £200 of recorded rent outstanding, a Record payment button, and October 2026 marked Part paid.">
+            </picture>
+            <picture class="showcase__phone showcase__phone--front">
+              <source type="image/webp" srcset="assets/img/phone-home-408.webp 408w, assets/img/phone-home-816.webp 816w, assets/img/phone-home-1224.webp 1224w" sizes="(min-width: 1264px) 310px, (min-width: 960px) 26vw, 62vw">
+              <img src="assets/img/phone-home.png" width="408" height="566" fetchpriority="high"
+                   alt="The app's home screen. It summarises a portfolio of 2 properties and 12 tenancies with October 2026 rent paid and remaining, and offers quick actions to record a payment, add a tenant, add a property or add a utility bill.">
+            </picture>
+          </div>
+          <figcaption class="hero__caption">Screens from the app, shown with fictional sample data.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--about" id="about" aria-labelledby="about-title">
+      <div class="wrap about">
+        <div class="about__copy">
+          <h2 id="about-title">A UK property company building a practical app for landlords</h2>
+          <p>Urban Wholesalers Properties LTD is a property company registered in England and Wales. We're developing an Android app that keeps rental records organised: properties, rooms, tenants, rent and payments, all in one place.</p>
+          <p>The idea is simple. You should be able to see what has been paid, what is part paid and what is still owed, without digging through notebooks, spreadsheets and bank statements.</p>
+        </div>
+
+        <aside class="company-card" aria-labelledby="company-card-title">
+          <div class="company-card__head">
+            <span class="icon-tile" aria-hidden="true"><svg><use href="#i-building"/></svg></span>
+            <h3 class="company-card__title" id="company-card-title">Company details</h3>
+          </div>
+          <dl class="details">
+            <div class="details__row">
+              <dt>Legal name</dt>
+              <dd>URBAN WHOLESALERS PROPERTIES LTD</dd>
+            </div>
+            <div class="details__row">
+              <dt>Company number</dt>
+              <dd>15449995</dd>
+            </div>
+            <div class="details__row">
+              <dt>Registered in</dt>
+              <dd>England and Wales</dd>
+            </div>
+            <div class="details__row">
+              <dt>Registered office</dt>
+              <dd>27 Burnham Close, Windsor, England, <span class="nowrap">SL4 4PN</span></dd>
+            </div>
+          </dl>
+          <a class="company-card__link" href="https://find-and-update.company-information.service.gov.uk/company/15449995">
+            View on Companies House
+            <svg aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- The app -->
+    <section class="section section--sage" id="app" aria-labelledby="app-title">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <h2 id="app-title">A look inside the app</h2>
+          <p>Properties, rooms and tenants are linked, so every tenancy keeps its own dates, rent cycle and yearly rent. These screens are from the app's current development version.</p>
+        </div>
+
+        <ul class="app-grid" role="list" aria-label="App screens">
+          <li class="app-card">
+            <a class="app-card__stage" href="assets/img/screen-properties-960.webp" data-lightbox>
+              <picture class="app-card__phone">
+                <source type="image/webp" srcset="assets/img/phone-properties-408.webp 408w, assets/img/phone-properties-816.webp 816w" sizes="(min-width: 1264px) 238px, (min-width: 900px) 19vw, (min-width: 600px) 40vw, 66vw">
+                <img src="assets/img/phone-properties.png" width="408" height="578" loading="lazy" decoding="async"
+                     alt="Properties screen listing two sample properties, MD1 Demo and MD2 Demo, each with an address and 4 of 8 places occupied, below an Add property button.">
+              </picture>
+              <span class="app-card__zoom"><svg aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>Full screen</span>
+            </a>
+            <h3 class="app-card__title">Properties</h3>
+            <p class="app-card__text">Each property with its address and how many places are occupied.</p>
+          </li>
+          <li class="app-card">
+            <a class="app-card__stage" href="assets/img/screen-property-960.webp" data-lightbox>
+              <picture class="app-card__phone">
+                <source type="image/webp" srcset="assets/img/phone-property-408.webp 408w, assets/img/phone-property-816.webp 816w" sizes="(min-width: 1264px) 238px, (min-width: 900px) 19vw, (min-width: 600px) 40vw, 66vw">
+                <img src="assets/img/phone-property.png" width="408" height="578" loading="lazy" decoding="async"
+                     alt="Property screen for MD1 Demo showing October 2026, 4 rooms with 4 occupied places, an Add room button, and the Garden Room with 2 of 2 places occupied.">
+              </picture>
+              <span class="app-card__zoom"><svg aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>Full screen</span>
+            </a>
+            <h3 class="app-card__title">Rooms</h3>
+            <p class="app-card__text">A property's rooms, with occupancy for the month you're viewing.</p>
+          </li>
+          <li class="app-card">
+            <a class="app-card__stage" href="assets/img/screen-tenants-960.webp" data-lightbox>
+              <picture class="app-card__phone">
+                <source type="image/webp" srcset="assets/img/phone-tenants-408.webp 408w, assets/img/phone-tenants-816.webp 816w" sizes="(min-width: 1264px) 238px, (min-width: 900px) 19vw, (min-width: 600px) 40vw, 66vw">
+                <img src="assets/img/phone-tenants.png" width="408" height="578" loading="lazy" decoding="async"
+                     alt="Tenants screen listing sample tenants such as Alex Example, Sam Sample and Jamie Demo, each with their property and room, below an Add tenant button.">
+              </picture>
+              <span class="app-card__zoom"><svg aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>Full screen</span>
+            </a>
+            <h3 class="app-card__title">Tenants</h3>
+            <p class="app-card__text">Everyone you let to, with their property and room.</p>
+          </li>
+          <li class="app-card">
+            <a class="app-card__stage" href="assets/img/screen-tenancy-960.webp" data-lightbox>
+              <picture class="app-card__phone">
+                <source type="image/webp" srcset="assets/img/phone-tenancy-408.webp 408w, assets/img/phone-tenancy-816.webp 816w" sizes="(min-width: 1264px) 238px, (min-width: 900px) 19vw, (min-width: 600px) 40vw, 66vw">
+                <img src="assets/img/phone-tenancy.png" width="408" height="578" loading="lazy" decoding="async"
+                     alt="Tenant screen for Alex Example showing a tenancy from 1 July 2026, rent cycle day 1, and yearly rent of £500 a month in 2026 and £550 a month in 2027.">
+              </picture>
+              <span class="app-card__zoom"><svg aria-hidden="true" focusable="false"><use href="#i-expand"/></svg>Full screen</span>
+            </a>
+            <h3 class="app-card__title">Tenancy</h3>
+            <p class="app-card__text">A tenant's dates, rent cycle and monthly rent for each year.</p>
+          </li>
+        </ul>
+
+        <p class="sample-note">
+          <svg class="sample-note__icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg>
+          Illustrative screens with fictional sample data. Final interface may change.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <h2 id="features-title">Everything a rent record needs</h2>
+          <p>The app covers the records landlords keep every month, from who lives where to what has been paid.</p>
+        </div>
+
+        <ul class="bento" role="list">
+          <li class="bento__item bento__item--feature">
+            <div class="feature-hero__copy">
+              <h3 class="feature-hero__title">Monthly payment status</h3>
+              <p>Each month is marked in green, yellow or red, always with a text label, so you can see who has paid at a glance.</p>
+              <ul class="pills" role="list">
+                <li><span class="pill pill--paid">Paid</span></li>
+                <li><span class="pill pill--part">Part paid</span></li>
+                <li><span class="pill pill--unpaid">Unpaid</span></li>
+              </ul>
+            </div>
+            <figure class="snippet">
+              <picture>
+                <source type="image/webp" srcset="assets/img/status-snippet-480.webp 480w, assets/img/status-snippet-960.webp 960w" sizes="(min-width: 1264px) 500px, (min-width: 600px) 44vw, 80vw">
+                <img src="assets/img/status-snippet.jpg" width="960" height="523" loading="lazy" decoding="async"
+                     alt="From the app: October 2026 marked Part paid, with £500 due, £300 paid, £200 remaining, and the month flagged as overdue.">
+              </picture>
+              <figcaption>From the app, with sample data</figcaption>
+            </figure>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg></span>
+            <h3 class="bento__title">Properties and rooms</h3>
+            <p>Organise multiple properties and the rooms within them. Occupancy is worked out from tenancy dates.</p>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 2v2"/><path d="M17.915 21a6 6 0 1 0-12 0"/><path d="M8 2v2"/><circle cx="12" cy="11" r="4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></span>
+            <h3 class="bento__title">Tenants and tenancies</h3>
+            <p>Keep each tenant linked to their tenancy and assigned room.</p>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"/><path d="M15 6h1v4"/><path d="m6.134 14.768.866-.5 2 3.464"/><circle cx="16" cy="8" r="6"/></svg></span>
+            <h3 class="bento__title">Rent and deposits</h3>
+            <p>Set a monthly rent for each year, and record deposit details separately from rent.</p>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></svg></span>
+            <h3 class="bento__title">Simple date selection</h3>
+            <p>Choose move-in, move-out and deposit dates from a calendar.</p>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4"/><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg></span>
+            <h3 class="bento__title">Payment recording</h3>
+            <p>Record full and part rent payments as they arrive.</p>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 17V9.5a1 1 0 0 1 5 0"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/><path d="M8 13h5"/><path d="M8 17h7"/></svg></span>
+            <h3 class="bento__title">Payment history and receipts</h3>
+            <p>Review recorded payments and share receipts.</p>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M22 8c0-2.3-.8-4.3-2-6"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/></svg></span>
+            <h3 class="bento__title">Rent reminders</h3>
+            <p>Optional reminders on your own phone when rent is due or overdue.</p>
+            <p class="bento__small">Needs notification permission. Android can delay background tasks, so timing may vary.</p>
+          </li>
+          <li class="bento__item">
+            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg></span>
+            <h3 class="bento__title">Utility bills</h3>
+            <p>Add utility bills from the home screen. They're kept separate from rent and deposits.</p>
+          </li>
+        </ul>
+
+        <p class="features__note">
+          <svg class="features__note-icon" aria-hidden="true" focusable="false"><use href="#i-info"/></svg>
+          <span><strong>The app keeps records. It doesn't move money.</strong> It doesn't email or text tenants, take bank transfers or collect rent online. Reminders appear on the landlord's own phone.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--sage" id="how-it-works" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <h2 id="how-title">From first property to first payment</h2>
+          <p>Setup takes six steps, and the app saves your progress on your phone as you go. Select a step to see its screen.</p>
+        </div>
+
+        <div class="howto">
+          <div class="howto__steps" role="tablist" aria-label="Setup steps" aria-orientation="vertical">
+            <button class="howto__tab" type="button" role="tab" id="howto-tab-1" aria-controls="howto-panel" aria-selected="true" data-step="1">
+              <span class="howto__num">1</span>
+              <span class="howto__text"><span class="howto__title">Add a property</span><span class="howto__desc">Give it a name you'll recognise, then add the address.</span></span>
+            </button>
+            <button class="howto__tab" type="button" role="tab" id="howto-tab-2" aria-controls="howto-panel" aria-selected="false" tabindex="-1" data-step="2">
+              <span class="howto__num">2</span>
+              <span class="howto__text"><span class="howto__title">Add its rooms</span><span class="howto__desc">Name each room and set the maximum number of tenants.</span></span>
+            </button>
+            <button class="howto__tab" type="button" role="tab" id="howto-tab-3" aria-controls="howto-panel" aria-selected="false" tabindex="-1" data-step="3">
+              <span class="howto__num">3</span>
+              <span class="howto__text"><span class="howto__title">Add tenants and tenancy details</span><span class="howto__desc">Enter each tenant's name and pick their move-in date from a calendar.</span></span>
+            </button>
+            <button class="howto__tab" type="button" role="tab" id="howto-tab-4" aria-controls="howto-panel" aria-selected="false" tabindex="-1" data-step="4">
+              <span class="howto__num">4</span>
+              <span class="howto__text"><span class="howto__title">Set rent, dates and deposit</span><span class="howto__desc">Choose the rent-cycle day and monthly rent, and add any deposit already received.</span></span>
+            </button>
+            <button class="howto__tab" type="button" role="tab" id="howto-tab-5" aria-controls="howto-panel" aria-selected="false" tabindex="-1" data-step="5">
+              <span class="howto__num">5</span>
+              <span class="howto__text"><span class="howto__title">Record payments as they arrive</span><span class="howto__desc">Log full or part payments. The month's status updates to show what's still owed.</span></span>
+            </button>
+            <button class="howto__tab" type="button" role="tab" id="howto-tab-6" aria-controls="howto-panel" aria-selected="false" tabindex="-1" data-step="6">
+              <span class="howto__num">6</span>
+              <span class="howto__text"><span class="howto__title">Review balances, status and reminders</span><span class="howto__desc">See what's outstanding at a glance, and turn on rent reminders if you want them.</span></span>
+            </button>
+          </div>
+
+          <div class="howto__panel" id="howto-panel" role="tabpanel" aria-labelledby="howto-tab-1" tabindex="0">
+            <div class="howto__stage">
+              <figure class="howto__shot" data-step="1">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/phone-add-property-408.webp 408w, assets/img/phone-add-property-816.webp 816w" sizes="(min-width: 1264px) 320px, (min-width: 960px) 26vw, 62vw">
+                  <img src="assets/img/phone-add-property.png" width="408" height="578" loading="lazy" decoding="async"
+                       alt="Add property screen with fields for the property name, address, town and postcode.">
+                </picture>
+              </figure>
+              <figure class="howto__shot" data-step="2" hidden>
+                <picture>
+                  <source type="image/webp" srcset="assets/img/phone-add-room-408.webp 408w, assets/img/phone-add-room-816.webp 816w" sizes="(min-width: 1264px) 320px, (min-width: 960px) 26vw, 62vw">
+                  <img src="assets/img/phone-add-room.png" width="408" height="578" loading="lazy" decoding="async"
+                       alt="Add room screen with the room name, the maximum number of tenants and a Save room button.">
+                </picture>
+              </figure>
+              <figure class="howto__shot" data-step="3" hidden>
+                <picture>
+                  <source type="image/webp" srcset="assets/img/phone-tenant-408.webp 408w, assets/img/phone-tenant-816.webp 816w" sizes="(min-width: 1264px) 320px, (min-width: 960px) 26vw, 62vw">
+                  <img src="assets/img/phone-tenant.png" width="408" height="578" loading="lazy" decoding="async"
+                       alt="Tenant screen with the tenant's full name, an optional mobile number and tenancy terms, including move-in and move-out dates.">
+                </picture>
+              </figure>
+              <figure class="howto__shot" data-step="4" hidden>
+                <picture>
+                  <source type="image/webp" srcset="assets/img/phone-rent-408.webp 408w, assets/img/phone-rent-816.webp 816w" sizes="(min-width: 1264px) 320px, (min-width: 960px) 26vw, 62vw">
+                  <img src="assets/img/phone-rent.png" width="408" height="578" loading="lazy" decoding="async"
+                       alt="Rent screen with a monthly rent of £500, a note that deposits are separate from rent, and a deposit of £300 already received.">
+                </picture>
+              </figure>
+              <figure class="howto__shot" data-step="5" hidden>
+                <picture>
+                  <source type="image/webp" srcset="assets/img/phone-payment-408.webp 408w, assets/img/phone-payment-816.webp 816w" sizes="(min-width: 1264px) 320px, (min-width: 960px) 26vw, 62vw">
+                  <img src="assets/img/phone-payment.png" width="408" height="578" loading="lazy" decoding="async"
+                       alt="Rent screen showing £200 outstanding, a Record payment button, and October 2026 marked Part paid and Overdue, with £300 paid of £500.">
+                </picture>
+              </figure>
+              <figure class="howto__shot" data-step="6" hidden>
+                <picture>
+                  <source type="image/webp" srcset="assets/img/phone-reminders-408.webp 408w, assets/img/phone-reminders-816.webp 816w" sizes="(min-width: 1264px) 320px, (min-width: 960px) 26vw, 62vw">
+                  <img src="assets/img/phone-reminders.png" width="408" height="578" loading="lazy" decoding="async"
+                       alt="Settings with an Enable rent reminders button, and a notice that records are stored on this phone.">
+                </picture>
+              </figure>
+            </div>
+            <p class="howto__caption" aria-live="polite">Step <span data-howto-current>1</span> of 6: <span data-howto-title>Add a property</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status -->
+    <section class="section section--status" id="status" aria-labelledby="status-title">
+      <div class="wrap">
+        <div class="status">
+          <div class="status__intro">
+            <h2 id="status-title">Where the app is today</h2>
+            <p class="status__lead">The Android application is currently in development and testing. Current rental records are stored locally on the device. Google <span class="nowrap">sign-in</span> and private cloud portfolios are under development.</p>
+          </div>
+
+          <div class="status__cols">
+            <div class="status__col">
+              <h3 class="status__heading">Working in the current build</h3>
+              <ul class="status__list" role="list">
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Property, room and tenant setup</li>
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Rent rates by year, and deposit records</li>
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Full and part payment recording</li>
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Monthly payment status</li>
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Payment history and receipts</li>
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Utility bills</li>
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>Optional rent reminders on your phone</li>
+              </ul>
+            </div>
+            <div class="status__col">
+              <h3 class="status__heading">Still in development</h3>
+              <ul class="status__list" role="list">
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-progress"/></svg>Google sign-in</li>
+                <li><svg class="status__icon" aria-hidden="true" focusable="false"><use href="#i-progress"/></svg>Private cloud portfolios</li>
+              </ul>
+              <figure class="status__quote">
+                <blockquote>
+                  <p>“Your records are stored on this phone. There is no additional app lock. Google <span class="nowrap">sign-in</span> and cloud sync are not connected yet.”</p>
+                </blockquote>
+                <figcaption>The storage notice in the app's settings</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <p class="status__note">The app isn't on Google Play yet. We'll add a link here when it's published.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <h2 id="contact-title">Contact us</h2>
+          <p>Questions about the app or about Urban Wholesalers Properties LTD? Email or call us.</p>
+        </div>
+        <ul class="contact-cards" role="list">
+          <li class="contact-card">
+            <span class="icon-tile" aria-hidden="true"><svg><use href="#i-mail"/></svg></span>
+            <span class="contact-card__label">Email</span>
+            <a class="contact-card__value" href="mailto:Urbanpropertyltd@hotmail.com">Urbanpropertyltd@<wbr>hotmail.com</a>
+          </li>
+          <li class="contact-card">
+            <span class="icon-tile" aria-hidden="true"><svg><use href="#i-phone"/></svg></span>
+            <span class="contact-card__label">Phone</span>
+            <a class="contact-card__value" href="tel:+447717131104">+44&nbsp;7717&nbsp;131104</a>
+          </li>
+          <li class="contact-card">
+            <span class="icon-tile" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+            <span class="contact-card__label">Registered office</span>
+            <span class="contact-card__value contact-card__value--plain">27 Burnham Close, Windsor, England, <span class="nowrap">SL4 4PN</span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="section section--privacy" id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap privacy">
+        <div class="privacy__intro">
+          <h2 id="privacy-title">Privacy information</h2>
+          <p>How this website and the app handle information today. We'll publish a full privacy policy before the app is released.</p>
+          <p class="privacy__updated">Last updated <time datetime="2026-10-25">25 October 2026</time></p>
+        </div>
+
+        <div class="privacy__cols">
+          <div class="privacy__block">
+            <h3>This website</h3>
+            <ul>
+              <li>This site is for information only. It has no accounts, forms, cookies, analytics or advertising trackers.</li>
+              <li>Fonts and images are served from this site. Nothing is loaded from third-party services.</li>
+              <li>Our hosting provider automatically processes basic technical data, such as IP addresses, browser type and the pages requested, to deliver the site and keep it secure.</li>
+              <li>If you email or call us, we'll use your details to reply. Email sent to our address is handled by Microsoft's Outlook.com service.</li>
+            </ul>
+          </div>
+          <div class="privacy__block">
+            <h3>The app</h3>
+            <ul>
+              <li>In the current development version, the records you enter (such as properties, rooms, tenants, tenancy dates, rent, deposits and payments) are stored on your phone.</li>
+              <li>Rent reminders are scheduled on your phone and only appear if you allow notifications.</li>
+              <li>If you share a receipt, it goes wherever you choose to send it.</li>
+              <li>Google <span class="nowrap">sign-in</span> and private cloud portfolios are in development. Before they launch, we'll explain what data they use and update this page.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="privacy__contact">Questions about privacy? Email <a href="mailto:Urbanpropertyltd@hotmail.com">Urbanpropertyltd@<wbr>hotmail.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="#top">
+          <svg class="brand__mark" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
+          <span class="brand__text">
+            <span class="brand__name">Urban Wholesalers</span>
+            <span class="brand__sub">Properties LTD</span>
+          </span>
+        </a>
+        <p class="site-footer__tagline">A practical rental-management app for landlords, in development for Android.</p>
+      </div>
+
+      <div class="site-footer__legal">
+        <p class="site-footer__legal-name">URBAN WHOLESALERS PROPERTIES LTD</p>
+        <p>Registered in England and Wales. Company number 15449995.</p>
+        <p>Registered office: 27 Burnham Close, Windsor, England, <span class="nowrap">SL4 4PN</span></p>
+        <p><a href="mailto:Urbanpropertyltd@hotmail.com">Urbanpropertyltd@<wbr>hotmail.com</a></p>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <ul role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#app">The app</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#contact">Contact us</a></li>
+          <li><a href="#privacy">Privacy information</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="wrap site-footer__base">
+      <p>© <span data-year>2026</span> Urban Wholesalers Properties LTD</p>
+      <p>Android is a trademark of Google LLC.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-labelledby="lightbox-caption">
+    <div class="lightbox__frame">
+      <button class="lightbox__close" type="button">Close</button>
+      <div class="lightbox__media"></div>
+      <p class="lightbox__caption" id="lightbox-caption"></p>
+    </div>
+  </dialog>
+</body>
+</html>
